@@ -4,6 +4,17 @@ body{
     font-size: 15px;
 }
 
+.ui-state-highlight {
+    background-color: transparent;
+    height: 100px;
+    border-radius: 20px;
+    border: 2px dashed #c1c4ce;
+}
+
+a{
+    cursor: pointer;
+}
+
 i{
     color: #3c75dd;
 }
@@ -26,6 +37,13 @@ i{
     color: #ff183a;
 }
 
+ul, li{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+
 /* HEADER */
     body > header{
         background-color: #ffffff;
@@ -37,6 +55,7 @@ i{
         padding-right: 20px;
         padding-left: 20px;
         position: fixed;
+        z-index: 20;
         width: 97%;
     }
 
@@ -44,6 +63,10 @@ i{
         padding-left: 20px;
         padding-right: 20px;
         border-right: 1px solid #f4f5f7;
+    }
+
+    .div-header a, .div-header a:hover{
+        text-decoration: none;
     }
 
     nav{
@@ -72,6 +95,7 @@ i{
     .name{
         display: flex;
         align-items: center;
+        color: #000000;
     }
 
     .burger{
@@ -136,7 +160,6 @@ i{
         align-items: center;
         justify-content: space-between;
         flex-wrap: wrap;
-        position: fixed;
         width: 97%;
         padding-top: 50px;
     }
@@ -152,7 +175,7 @@ i{
         justify-content: space-between;
     }
 
-    article div > footer{
+    article li > footer{
         display: flex;
         align-items: center;
     }
@@ -161,21 +184,16 @@ i{
     .container-list{
         display: flex;
         flex-wrap: nowrap;
-        padding-top: 150px;
     }
 
     .list{
         background-color: #ffffff;
         min-width: 300px;
+        height:100%;
         padding: 10px;
         margin-right: 20px;
         border-radius:15px;
-        max-height: 530px;
-        overflow-y: hidden;
-        position: relative;
-        overflow-x: hidden;
     }
-
 
     .card{
         background-color: #f4f5f7;
@@ -184,16 +202,12 @@ i{
         margin: 5px;
         margin-top: 15px;
         position: relative;
-    }
-
-    .list .card:last-child{
-        margin-bottom: 100px;
+        z-index: 10;
     }
 
     .container-cards{
-        height: 100%;
-        overflow-y: scroll;
-
+        min-height: 50px;
+        height: auto;
     }
 
     .title-list{
@@ -240,11 +254,6 @@ i{
     .add{
         padding: 10px 10px 20px 10px;
         cursor: pointer;
-        position: absolute;
-        bottom: 0;
-        z-index: 10;
-        background-color: #ffffff;
-        width: 100%;
     }
 
     .button{
@@ -289,6 +298,33 @@ i{
     }
 /*****/
 
+/* FORM */
+
+    .formNewCard{
+        display: none;
+    }
+
+    textarea{
+        min-width: 290px;
+        border-radius: 15px;
+        border: 1px solid #c1c4ce;
+        height: 100px;
+    }
+
+    .canceled{
+        border: 1px solid #fd6f6f;
+        border-radius: 10px;
+        margin-top: 10px;
+    }
+
+    form input[type=submit]{
+        border: 1px solid #5dc560;
+        border-radius: 10px;
+        margin-right: 15px;
+        margin-top: 10px;
+    }
+/*****/
+
 @media screen and (max-width: 450px){
     body > header{
         padding-top: 50px;
@@ -303,6 +339,7 @@ i{
 
     }
     .name p{display: none}
+
     h1{
         font-size: 1.3em;
     }
@@ -346,7 +383,6 @@ i{
         flex-basis: 15%;
     }
 }
-
 
 
 
